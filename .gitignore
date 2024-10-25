@@ -1,0 +1,20 @@
+# Ignore logs directory
+/logs/
+
+# Ignore target directory
+/target/
+
+# Ignore compiled SQL files
+dbt_modules/
+
+# Ignore dbt packages
+dbt_packages/
+
+# Ignore any other temporary files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignore environment files
+.env

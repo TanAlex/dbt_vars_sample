@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: my_source
+    database: "{{ var(target.name)['source']['database'] }}"
+    schema: "{{ var(target.name)['source']['schema'] }}"
+    tables:
+      - name: my_table
+        description: "A table in the {{ target.name }} environment"
+        identifier: "{{ var(target.name)['source']['table'] }}"
+        columns:
+          - name: id
+            description: "The primary key"
+          - name: name
+            description: "The name field"

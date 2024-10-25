@@ -1,0 +1,33 @@
+# profiles.yml
+my_project:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: th-ttanlab-lab-1b6220
+      dataset: ttan_test_ca
+      location: northamerica-northeast1
+      # location: US
+      threads: 4
+      # optional
+      token_cache: ~/.config/gcloud/application_default_credentials.json
+    prod:
+      type: bigquery
+      method: oauth
+      project: th-ttanlab-lab-1b6220
+      dataset: ttan_test_ca
+      location: northamerica-northeast1
+      # location: US
+      threads: 4
+      # optional
+      token_cache: ~/.config/gcloud/application_default_credentials.json
+    local:
+      dbname: mydatabase
+      host: localhost
+      pass: ttan123
+      port: 5432
+      schema: myschema
+      threads: 1
+      type: postgres
+      user: ttan
